@@ -29,17 +29,16 @@
 //     }
 // }
 
-// import java.util.Scanner;
+import java.util.Scanner;
 public class TargetSumTriplet {
     public static void main(String []args) {
-        // Scanner sc = new Scanner(System.in);
-        // int N = sc.nextInt();
-        // int [] arr = new int[N];
-        // for(int i=0; i<N; i++) {
-        //     arr[i] = sc.nextInt();
-        // }
-        // int target = sc.nextInt();
-        int [] arr = {5,7,9,1,2,4,6,8,3};
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int [] arr = new int[N];
+        for(int i=0; i<N; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int target = sc.nextInt();
         // Selection sort
         for(int i=0; i<arr.length-1; i++){
             int smallest = i;
@@ -57,15 +56,16 @@ public class TargetSumTriplet {
             int left = i+1;
             int right = arr.length-1;
             while (left < right) {
-                if (arr[i] + arr[left] + arr[right] == 10) {
+                int sum = arr[i] + arr[left] + arr[right];
+                if (sum == target) {
                     System.out.println(arr[i] + ", " + arr[left] + " and " + arr[right]);
                     left++;
                     right--;
                 }
-                if (arr[left] + arr[right] > 10) {
+                if (sum > target) {
                     right--;
                 }
-                if (arr[left] + arr[right] < 10) {
+                if (sum < target) {
                     left++;
                 }
             }
