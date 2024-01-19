@@ -10,8 +10,8 @@ public class MoveXToTheStringEnd {
             xElements.append("x");
             MoveAllX(str, otherElements, xElements, i+1);
         } else {
-            Character currentChar = str.charAt(i);
-            otherElements.append(currentChar.toString());
+            char currentChar = str.charAt(i);
+            otherElements.append(currentChar);
             MoveAllX(str, otherElements, xElements, i+1);
         }        
     }
