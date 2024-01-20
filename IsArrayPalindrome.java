@@ -2,6 +2,15 @@ import java.util.Scanner;
 
 public class IsArrayPalindrome {
     public static boolean CheckPalindrome(int left, int right, int arr[]) {
+        // if array is empty return false
+        if (right <= 0){
+            return false;
+        }
+        // if length of array is one, then it is palindrome
+        if(right == 1){
+            return true;
+        }
+        // if start is greater than end return true
         if (left >= right) {
             return true;
         }
