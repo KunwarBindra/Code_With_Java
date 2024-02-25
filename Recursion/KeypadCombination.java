@@ -30,13 +30,13 @@ import java.util.Scanner;
 // }
 
 public class KeypadCombination {
-    public static String arr[] = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz"};
+    public static String arr[] = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     public static void Combination(int idx, String inputStr, String newStr) {
         if (idx == inputStr.length()) {
             System.out.println(newStr);
             return;
         }
-        String mapping = arr[inputStr.charAt(idx) - '0'];
+        String mapping = arr[inputStr.charAt(idx) - '2'];
         for (int i=0; i<mapping.length(); i++) {
             Combination(idx+1, inputStr, newStr+mapping.charAt(i));
         }
