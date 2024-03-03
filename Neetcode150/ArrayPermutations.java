@@ -1,7 +1,6 @@
 package Neetcode150;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
 
 // Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 

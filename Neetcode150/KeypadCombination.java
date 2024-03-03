@@ -1,7 +1,6 @@
 package Neetcode150;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
 
 // Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
 

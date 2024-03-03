@@ -1,8 +1,6 @@
 package Neetcode150;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
-
 // Given an integer array nums of unique elements, return all possible 
 // subsets
 //  (the power set).
