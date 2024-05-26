@@ -1,0 +1,73 @@
+package Queue;
+
+public class QueueUsingArray {
+    static class Queue {
+        static int arr[];
+        static int size;
+        static int rear = -1;
+ 
+ 
+        Queue(int size) {
+            this.size = size;
+            arr = new int[size];
+        }
+ 
+ 
+        public static boolean isEmpty() {
+            return rear == -1;
+        }
+ 
+ 
+        public static boolean isFull() {
+            return rear == size-1;
+        }
+ 
+ 
+        // O(1)
+        public static void add(int data) {
+            if(isFull()) {
+                System.out.println("Overflow");
+                return;
+            }
+ 
+ 
+            rear++;
+            arr[rear] = data;
+        }
+ 
+ 
+        //O(n)
+        public static int remove() {
+            if(isEmpty()) {
+                System.out.println("empty queue");
+                return -1;
+            }
+            int front = arr[0];
+            for(int i=0; i<rear; i++) {
+                arr[i] = arr[i+1];
+            }
+            rear--;
+            return front;
+        }
+ 
+ 
+        // O(1)
+        public static int peek() {
+            if(isEmpty()) {
+                System.out.println("empty queue");
+                return -1;
+            }
+           
+            return arr[0];
+        }
+    }
+    public static void main(String args[]) {
+        Queue q = new Queue(5);
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        System.out.println(q.remove());
+        System.out.println(q.peek());
+    }
+ 
+}
