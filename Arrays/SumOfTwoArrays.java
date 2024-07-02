@@ -1,3 +1,25 @@
+/*
+    Problem Name: Sum of Two Arrays
+
+    Take as input N, the size of array. 
+    Take N more inputs and store that in an array. 
+    Take as input M, the size of second array and take M more inputs and store that in second array. 
+    Write a function that returns the sum of two arrays. 
+    Print the value returned.
+    
+    Constraints: Length of Array should be between 1 and 1000.
+
+    Sample Input:   4
+                    1 0 2 9
+                    5
+                    3 4 5 6 7
+
+
+    Sample Output:  3, 5, 5, 9, 6, END
+
+    Explanation: Sum of [1, 0, 2, 9] and [3, 4, 5, 6, 7] is [3, 5, 5, 9, 6] and 
+                 the first digit represents carry over , if any (0 here ) .
+*/
 package Arrays;
 import java.util.Scanner;
 
